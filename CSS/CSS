@@ -1,0 +1,144 @@
+/* ===== Colores por marca ===== */
+:root {
+    --rolex: #c8102e;     /* rojo */
+    --patek: #1546b8;     /* azul */
+    --ap: #e8700a;        /* naranja */
+    --cartier: #f2b705;   /* amarillo */
+    --cartier-borde: #8a6a00; /* tono oscuro para dar legibilidad al amarillo */
+    --negro: #000000;
+    --gris: #eeeeee;
+}
+ 
+/* ===== Base ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: var(--negro);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+ 
+header {
+    border-bottom: 2px solid var(--negro);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+ 
+.logo-tabla,
+.logo-tabla td {
+    border: none;
+}
+ 
+section {
+    margin-bottom: 40px;
+    padding-left: 15px;
+    border-left: 6px solid var(--negro);
+}
+ 
+footer {
+    border-top: 2px solid var(--negro);
+    margin-top: 40px;
+    padding-top: 10px;
+    text-align: center;
+}
+ 
+small { color: #333; }
+ 
+img.reloj {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid var(--negro);
+    display: block;
+    margin: 10px 0;
+    background: var(--gris);
+}
+ 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+}
+ 
+th, td {
+    border: 1px solid var(--negro);
+    padding: 8px;
+    text-align: left;
+}
+ 
+th { background: var(--gris); }
+ 
+/* ===== Navegación ===== */
+nav a {
+    margin-right: 15px;
+    color: var(--negro);
+    font-weight: bold;
+    text-decoration: none;
+}
+ 
+nav a:hover { text-decoration: underline; }
+ 
+nav a.nav-rolex   { color: var(--rolex); }
+nav a.nav-patek   { color: var(--patek); }
+nav a.nav-ap      { color: var(--ap); }
+nav a.nav-cartier { color: var(--cartier); text-shadow: 0 0 1px var(--cartier-borde); }
+ 
+/* ===== ROLEX: rojo ===== */
+section.rolex { border-left-color: var(--rolex); }
+ 
+section.rolex h2,
+section.rolex h3,
+section.rolex li b,
+section.rolex p a {
+    color: var(--rolex);
+}
+ 
+/* ===== PATEK PHILIPPE: azul ===== */
+section.patek { border-left-color: var(--patek); }
+ 
+section.patek h2,
+section.patek h3,
+section.patek li b,
+section.patek p a {
+    color: var(--patek);
+}
+ 
+/* ===== AUDEMARS PIGUET: naranja ===== */
+section.ap { border-left-color: var(--ap); }
+ 
+section.ap h2,
+section.ap h3,
+section.ap li b,
+section.ap p a {
+    color: var(--ap);
+}
+ 
+/* ===== CARTIER: amarillo ===== */
+section.cartier { border-left-color: var(--cartier); }
+ 
+section.cartier h2,
+section.cartier h3,
+section.cartier li b,
+section.cartier p a {
+    color: var(--cartier);
+    text-shadow: 0 0 1px var(--cartier-borde);
+}
+ 
+/* ===== Tabla comparativa: marca y modelo estrella con su color ===== */
+tr.fila-rolex   td:first-child, tr.fila-rolex   td:last-child { color: var(--rolex);   font-weight: bold; }
+tr.fila-patek   td:first-child, tr.fila-patek   td:last-child { color: var(--patek);   font-weight: bold; }
+tr.fila-ap      td:first-child, tr.fila-ap      td:last-child { color: var(--ap);      font-weight: bold; }
+tr.fila-cartier td:first-child, tr.fila-cartier td:last-child {
+    color: var(--cartier);
+    font-weight: bold;
+    text-shadow: 0 0 1px var(--cartier-borde);
+}
+ 
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    body { padding: 12px; }
+    nav a { display: inline-block; margin-bottom: 6px; }
+    img.reloj { width: 100%; height: auto; aspect-ratio: 1 / 1; }
+}
